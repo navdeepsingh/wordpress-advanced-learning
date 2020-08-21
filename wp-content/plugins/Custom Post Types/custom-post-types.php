@@ -15,5 +15,8 @@ define('LPTDOMAIN', 'lpt');
 define('LPTPATH', plugin_dir_path(__FILE__));
 
 require_once LPTPATH . '/post-types/register.php';
+require_once LPTPATH . '/taxonomies/register.php';
 
 add_action('init', 'lpt_register_business_type');
+add_action('init', 'lpt_register_size_taxonomy');
+add_action('init', 'lpt_register_location_taxonomy');
