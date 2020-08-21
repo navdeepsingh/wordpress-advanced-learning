@@ -20,29 +20,24 @@
 
 	<div class="entry-content">
 		<?php
-the_post_thumbnail();
-the_content(
-    sprintf(
-        wp_kses(
-            /* translators: %s: Post title. Only visible to screen readers. */
-            __('Continue reading<span class="screen-reader-text"> "%s"</span>', 'twentynineteen'),
-            array(
-                'span' => array(
-                    'class' => array(),
-                ),
+        the_post_thumbnail();
+        the_content(
+            sprintf(
+                get_the_title()
             )
-        ),
-        get_the_title()
-    )
-);
+        );
 
-wp_link_pages(
-    array(
-        'before' => '<div class="page-links">' . __('Pages:', 'twentynineteen'),
-        'after' => '</div>',
-    )
-);
-?>
+        wp_link_pages(
+            array(
+                'before' => '<div class="page-links">' . __('Pages:', 'twentynineteen'),
+                'after' => '</div>',
+            )
+        );
+        ?>
+        <section class="related-events">
+            <h3><?php _e('Upcoming Events', 'twentynineteen'); ?> </h3>
+            <?php lpt_show_events(); ?>
+        </section>
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
