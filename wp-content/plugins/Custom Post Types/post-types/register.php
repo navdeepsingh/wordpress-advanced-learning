@@ -16,7 +16,7 @@ function lpt_register_business_type()
     $args = array(
         'labels' => $labels,
         'public' => true,
-        'has_archive' => 'businesses',
+        'has_archive' => 'businesses',// To display archive page realted to this post
         'rewrite' => array('has_front' => true),
         'menu_icon' => 'dashicons-building',
         'supports' => array('title', 'editor', 'thumbnail'),

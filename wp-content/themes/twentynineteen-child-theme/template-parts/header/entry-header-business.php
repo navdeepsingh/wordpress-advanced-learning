@@ -13,7 +13,9 @@ $discussion = !is_page() && twentynineteen_can_show_post_thumbnail() ? twentynin
 
 <?php if (!is_page()): ?>
 <div class="entry-meta">
+    <p class="taxonomy-sizes"><?php echo get_the_term_list( get_the_ID(), 'size', '<strong>Size: </strong>', ', ', '' ); ?> </p>
 	<?php
+    
 // Edit post link.
 edit_post_link(
     sprintf(
