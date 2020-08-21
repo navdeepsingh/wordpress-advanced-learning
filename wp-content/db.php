@@ -1,0 +1,1 @@
+/Users/navdeepsingh/Projects/wp-learning/wp-content/plugins/query-monitor/wp-content/db.php
