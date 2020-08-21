@@ -52,3 +52,10 @@ function lpt_show_events() {
 
     wp_reset_query();
 }
+
+function lpt_rewrite_flush() {
+    lpt_register_business_type();
+    flush_rewrite_rules();
+}
+
+add_action('after_switch_theme', 'lpt_rewrite_flush');

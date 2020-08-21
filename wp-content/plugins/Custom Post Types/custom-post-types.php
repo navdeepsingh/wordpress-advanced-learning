@@ -20,3 +20,10 @@ require_once LPTPATH . '/taxonomies/register.php';
 add_action('init', 'lpt_register_business_type');
 add_action('init', 'lpt_register_size_taxonomy');
 add_action('init', 'lpt_register_location_taxonomy');
+
+function lpt_rewrite_flush() {
+    lpt_register_business_type();
+    flush_rewrite_rules();
+}
+
+register_activation_hook(__FILE__, 'lpt_rewrite_flush');
