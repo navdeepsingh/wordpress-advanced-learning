@@ -1,0 +1,1 @@
+{"version":3,"sources":["theme.scss"],"names":[],"mappings":"AAEA,KACE,iBAAA,MACA,WAAA,KAGF,cACE,iBAAA","file":"theme.min.css","sourcesContent":["$base-color: wheat;\n\nbody{\n  background-color: $base-color;\n  text-align: left; \n}\n\n.site-content {\n  background-color: $base-color;\n}"]}

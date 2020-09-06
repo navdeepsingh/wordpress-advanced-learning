@@ -34,7 +34,7 @@ function lpt_show_events() {
 
     $events = new WP_Query($args);
 
-    if ( $events->have_posts()) {
+   if ( $events->have_posts()) {
         echo '<ul class="events-list">';
         $format = '<li class="event"><a href="%1$s" title="%2$s">%2$s</a>: %3$s</li>';
 
@@ -53,9 +53,3 @@ function lpt_show_events() {
     wp_reset_query();
 }
 
-function lpt_rewrite_flush() {
-    lpt_register_business_type();
-    flush_rewrite_rules();
-}
-
-add_action('after_switch_theme', 'lpt_rewrite_flush');

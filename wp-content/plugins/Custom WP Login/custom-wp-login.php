@@ -1,5 +1,4 @@
 <?php
-
 /**
  * Plugin Name: Custom WP Login
  * Version: 0.1
@@ -25,12 +24,18 @@ add_filter('login_errors', 'cwpl_error_message');
      return 'Well, that was not it!';
  }
 
- /**
-  * Remove Shake Script
-  */
-  add_action('login_footer', 'cwpl_remove_shake');
-  function cwpl_remove_shake() {
-    remove_action('login_footer', 'wp_shake_js', 12);
-  }
+/**
+ * Remove Shake Script
+ */
+add_action('login_footer', 'cwpl_remove_shake');
+function cwpl_remove_shake() {
+  remove_action('login_footer', 'wp_shake_js', 12);
+}
+
+add_filter('admin_title', 'my_admin_title', 10, 2);
+function my_admin_title($admin_title, $title) {
+  return $title.' -&gt; '.get_bloginfo('name');
+}
+
  
  

@@ -1,0 +1,27 @@
+{
+  "browserSyncOptions": {
+    "proxy": "localhost/wp-learning",
+    "notify": false,
+    "ui": {
+      "port": 8001
+    }
+  },
+  "browserSyncWatchFiles": [
+    "./css/*.min.css",
+    "./js/*.min.js",
+    "./**/*.php"
+  ],
+  "paths": {
+    "js": "./js",
+    "css": "./css",
+    "img": "./img",
+    "imgsrc": "./src/img",
+    "sass": "./sass",
+    "node": "./node_modules/",
+    "bower": "./bower_components/",
+    "dev": "./src",
+    "dist": "./dist",
+    "distprod": "./dist-product",
+    "vendor": ""
+  }
+}
